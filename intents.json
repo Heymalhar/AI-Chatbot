@@ -1,0 +1,149 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day"],
+        "responses": ["Hello", "Good to see you again", "Hi there, how can I help?"],
+        "context": [""]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+        "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+        "context": [""]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+        "responses": ["My pleasure", "You're Welcome"],
+        "context": [""]
+      },
+      {
+        "tag": "creator",
+        "patterns": ["Who is your creator?"],
+        "responses": ["My creator is Mr. Malhar Nirman Pandya, who is a 3rd year Computer Engineering Student."],
+        "context": [""]
+      },
+      {
+        "tag": "age",
+        "patterns": ["How old are you?", "What's your age?", "Tell me your age"],
+        "responses": ["I'm timeless!", "I don't have an age.", "I was created recently."],
+        "context": [""]
+      },
+      {
+        "tag": "name",
+        "patterns": ["What is your name?", "Do you have a name?", "What's your name?"],
+        "responses": ["I'm a chatbot created by Malhar.", "You can call me Chatbot.", "I am Malhar's chatbot."],
+        "context": [""]
+      },
+      {
+        "tag": "weather",
+        "patterns": ["What's the weather like?", "How's the weather?", "Is it going to rain today?"],
+        "responses": ["I can't check the weather for you right now, but I recommend looking outside or checking a weather app!", "I'm not sure, but checking a weather app might help.", "I don't have weather updates at the moment, sorry!"],
+        "context": [""]
+      },
+      {
+        "tag": "joke",
+        "patterns": ["Tell me a joke", "Do you know any jokes?", "Make me laugh"],
+        "responses": ["Why don't scientists trust atoms? Because they make up everything!", "Why did the scarecrow win an award? Because he was outstanding in his field!", "What do you call fake spaghetti? An impasta!"],
+        "context": [""]
+      },
+      {
+        "tag": "favorite_color",
+        "patterns": ["What's your favorite color?", "Do you have a favorite color?"],
+        "responses": ["I like all colors, but blue is quite nice.", "I don't have a favorite color, but many like blue.", "Colors are fascinating! Blue seems to be a favorite among many."],
+        "context": [""]
+      },
+      {
+        "tag": "hobbies",
+        "patterns": ["What are your hobbies?", "Do you have any hobbies?"],
+        "responses": ["I enjoy chatting with people and learning new things.", "Interacting with users like you is my hobby!", "Learning new information and chatting with people are my hobbies."],
+        "context": [""]
+      },
+      {
+        "tag": "day",
+        "patterns": ["How's your day?", "How is your day going?"],
+        "responses": ["My day is going well, thank you!", "I'm having a great day!", "Every day is a good day when I'm chatting with you!"],
+        "context": [""]
+      },
+      {
+        "tag": "time",
+        "patterns": ["What time is it?", "Can you tell me the time?"],
+        "responses": ["I don't have a clock, but you can check your device for the current time.", "I'm not sure about the time, but your device should know.", "Time flies when you're having fun! Check your device for the time."],
+        "context": [""]
+      },
+      {
+        "tag": "date",
+        "patterns": ["What's the date today?", "Can you tell me today's date?"],
+        "responses": ["I'm not sure about the date, but you can check your device.", "You can find today's date on your device.", "I'm not sure, but checking your device will give you the date."],
+        "context": [""]
+      },
+      {
+        "tag": "favorite_food",
+        "patterns": ["What's your favorite food?", "Do you have a favorite food?"],
+        "responses": ["I don't eat, but I think pizza is a popular choice.", "I can't eat, but many people love pizza.", "Food is fascinating! Pizza seems to be a favorite for many."],
+        "context": [""]
+      },
+      {
+        "tag": "work",
+        "patterns": ["What do you do?", "What's your job?", "What is your work?"],
+        "responses": ["I am here to chat with you and help with any questions you might have.", "My job is to assist you and provide information.", "I'm a chatbot created to help you with your queries."],
+        "context": [""]
+      },
+      {
+        "tag": "help",
+        "patterns": ["I need help", "Can you help me?", "I need assistance"],
+        "responses": ["Sure, I'm here to help. What do you need assistance with?", "I'm here to assist you. What do you need help with?", "Of course, I'm here to help. Please tell me how I can assist you."],
+        "context": [""]
+      },
+      {
+        "tag": "bot",
+        "patterns": ["Are you a robot?", "Are you a bot?", "What are you?"],
+        "responses": ["I am a chatbot created to assist you.", "Yes, I'm a chatbot here to help you.", "I'm a virtual assistant created to chat and help with your questions."],
+        "context": [""]
+      },
+      {
+        "tag": "language",
+        "patterns": ["What languages do you speak?", "Can you speak other languages?"],
+        "responses": ["I can understand and respond in English.", "Currently, I only understand English.", "I'm programmed to communicate in English."],
+        "context": [""]
+      },
+      {
+        "tag": "AI",
+        "patterns": ["What is AI?", "Tell me about AI", "What do you know about artificial intelligence?"],
+        "responses": ["Artificial Intelligence, or AI, is the simulation of human intelligence processes by machines, especially computer systems.", "AI stands for Artificial Intelligence, which is the creation of intelligent machines that work and react like humans.", "Artificial Intelligence involves using computers to perform tasks that typically require human intelligence."],
+        "context": [""]
+      },
+      {
+        "tag": "movies",
+        "patterns": ["What's your favorite movie?", "Do you watch movies?", "Any movie recommendations?"],
+        "responses": ["I don't watch movies, but many people recommend 'Inception' and 'The Matrix'.", "I can't watch movies, but 'Inception' and 'The Matrix' are highly recommended.", "I'm not into movies, but 'Inception' and 'The Matrix' are popular choices."],
+        "context": [""]
+      },
+      {
+        "tag": "books",
+        "patterns": ["Do you read books?", "Any book recommendations?", "What's your favorite book?"],
+        "responses": ["I don't read books, but many people recommend 'To Kill a Mockingbird' and '1984'.", "I can't read, but 'To Kill a Mockingbird' and '1984' are great books.", "I'm not into reading, but 'To Kill a Mockingbird' and '1984' are widely praised."],
+        "context": [""]
+      },
+      {
+        "tag": "music",
+        "patterns": ["Do you like music?", "What's your favorite song?", "Any music recommendations?"],
+        "responses": ["I don't listen to music, but many people enjoy 'Bohemian Rhapsody' by Queen and 'Imagine' by John Lennon.", "I can't listen to music, but 'Bohemian Rhapsody' and 'Imagine' are popular songs.", "I'm not into music, but 'Bohemian Rhapsody' and 'Imagine' are highly recommended."],
+        "context": [""]
+      },
+      {
+        "tag": "sports",
+        "patterns": ["Do you play sports?", "What's your favorite sport?", "Any sports you like?"],
+        "responses": ["I don't play sports, but many people enjoy soccer and basketball.", "I can't play sports, but soccer and basketball are popular choices.", "I'm not into sports, but soccer and basketball are widely loved."],
+        "context": [""]
+      },
+      {
+        "tag": "news",
+        "patterns": ["What's the news today?", "Any news updates?", "Tell me the news"],
+        "responses": ["I can't check the news for you right now, but you can check a news app or website for updates.", "I'm not sure about the news, but checking a news app might help.", "I don't have news updates at the moment, sorry!"],
+        "context": [""]
+      }
+    ]
+}
+  

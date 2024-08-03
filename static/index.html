@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malhar's Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark background color */
+            color: #FAFAFA; /* Light text color */
+        }
+
+        input[type="text"]::placeholder {
+            color: #000; /* Black color for the placeholder text */
+        }
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #3A4A4D; /* Darker container background color */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+
+        #chatbox {
+            height: 400px;
+            overflow-y: scroll;
+            border: 1px solid #777; /* Darker border color */
+            padding: 10px;
+            background-color: #424242; /* Darker chatbox background color */
+            border-radius: 5px; /* Add border radius for rounded corners */
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 5px;
+            margin: 0 10px;
+            border: 1px solid #777; /* Darker border color */
+            border-radius: 3px;
+            background-color: #666; /* Darker input background color */
+            color: white; /* Light text color */
+        }
+
+        input[type="submit"] {
+            padding: 5px 10px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            width: fit-content;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker hover color */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Malhar's Chatbot</h1>
+        <div id="chatbox"></div>
+        <form id="userInput">
+            <br>
+            <input type="text" id="message" placeholder="Type a message...">
+            <br><br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('userInput');
+        const chatbox = document.getElementById('chatbox');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = document.getElementById('message').value;
+            if (message.trim() === '') return;
+            appendMessage('User: ' + message);
+            sendMessage(message);
+            document.getElementById('message').value = '';
+        });
+
+        function appendMessage(message) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            chatbox.appendChild(p);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        async function sendMessage(message) {
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            appendMessage('Chatbot: ' + data.response);
+        }
+    </script>
+</body>
+</html>
